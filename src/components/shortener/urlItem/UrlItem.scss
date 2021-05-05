@@ -1,0 +1,45 @@
+@import '../../../styles/colors';
+@import '../../../styles/breakpoints';
+
+.url-item {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px 5px 20px;
+
+    @include mobile {
+        flex-direction: column;
+        height: 160px;
+        font-size: 12px;
+        height: 100px;
+        line-height: 30px;
+    }
+}
+
+.original-link {
+    width: 50%;
+}
+
+.short-link {
+    color: $primary-cyan;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include mobile {
+        justify-content: flex-start;
+    }
+}
+
+.actions-container {
+    margin: auto 0 auto auto;
+
+    @include mobile {
+        margin: 0 0 0 0;
+    }
+}

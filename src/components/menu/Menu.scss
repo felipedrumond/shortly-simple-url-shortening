@@ -1,0 +1,98 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '../../styles/colors';
+@import '../../styles/breakpoints';
+
+.menu-component-container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding: 10px 80px 8px 80px;
+
+    @include mobile {
+        padding: 10px;
+        display: flex;
+        grid-template-columns: none;
+    }
+}
+
+.logo {
+    zoom: 70%;
+
+    @include mobile {
+        zoom: 80%;
+    }
+}
+
+.menu-icon {
+    float: right;
+    margin-right: 20px;
+    font-size: 30px;
+    color: $neutral-gray;
+    
+    @include desktop {
+        display: none;
+    }
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include desktop {
+        div {
+            margin-left: 1rem;
+        }
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.open {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: $primary-dark-violet;
+    border-radius: 5px;
+    width: 95%;
+    margin-top: 50px;
+    height: 380px;
+    justify-content: space-around;
+    
+    div {
+        text-align: center;
+    }
+
+    a {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.menu-resources {
+    @include desktop {
+        margin-right: auto;
+    }
+}
+
+.menu-button-container {
+    @include mobile {
+        padding: 10px;
+    }
+
+    @include desktop {
+        margin-top: -5px;
+    }
+}
+
+hr {
+    @include desktop {
+        display: none;
+    }
+    width: 90%;
+    border: none;
+    height: 1px;
+    background-color: $neutral-grayish-violet;
+    opacity: 0.4;
+}

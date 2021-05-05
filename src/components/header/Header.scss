@@ -1,0 +1,65 @@
+@import '../../styles/colors';
+@import '../../styles/breakpoints';
+
+.header-container {
+    padding: 60px 80px 8px 80px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.1;
+
+    @include mobile {
+        padding: 5px 5px 5px 5px;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 70px;
+        font-weight: 700;
+        margin-top: 80px;
+        color: $primary-dark-violet;
+        order: 0;
+
+        @include mobile {
+            order: 1;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .description {
+            font-size: 20px;
+            font-weight: 500;
+            color: $neutral-gray;
+            line-height: 150%;
+            max-width: 70%;
+            margin-bottom: 20px;
+            
+            .description-button {
+                max-width: 150px;
+            }
+
+            @include mobile {
+                margin-top: 10px;
+                font-size: 18px;
+                max-width: 100%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .illustration {
+        img {
+            margin-right: -240px;
+        }
+
+        @include mobile {
+            order: 0;
+            
+            img {
+                margin-right: 0px;
+                max-height: 350px;
+            }
+        }
+    }
+}
